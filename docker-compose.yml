@@ -6,8 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: banten_logistik_api/php
-    container_name: banten_logistik_api
+    image: laravel_jwt/php
+    container_name: laravel_jwt
     restart: unless-stopped
     working_dir: /var/www
     volumes:
@@ -19,7 +19,7 @@ services:
   #Nginx Service
   webserver:
     image: nginx:alpine
-    container_name: webserver_banten_logistik_api
+    container_name: webserver_laravel_jwt
     restart: unless-stopped
     tty: true
     ports:
